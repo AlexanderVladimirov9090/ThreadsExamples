@@ -1,0 +1,49 @@
+package com.gmail.alexander.vladimirov1902.counterlistener;
+
+/**
+ * @author Alexander Vladimirov
+ *         <alexandervladimirov1902@gmail.com>
+ *         Simple class that counts.
+ */
+
+public class Counter extends Thread {
+    private int count;
+    private int max;
+    private final Thread listener;
+
+    public Counter(int max, Thread listener) {
+
+        this.max = max;
+        this.listener = listener;
+    }
+
+    @Override
+    public void run() {
+        synchronized (listener) {
+            count();
+
+            System.out.println("Done! " + this.getName());
+            listener.notifyAll();
+
+        }
+
+    }
+
+    private void count() {
+        while (count < max) {
+
+            count++;
+            System.out.println(getName() + ": " + count);
+            listener.notify();
+
+            try {
+                sleep(1000);
+                listener.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+
