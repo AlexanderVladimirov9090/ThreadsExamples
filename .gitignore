@@ -1,0 +1,27 @@
+# User-specific stuff:
+.idea
+arrayaddremove/.gradle
+arrayaddremove/build
+arrayaddremove/gradle
+arrayaddremove/gradlew
+arrayaddremove/gradlew.bat
+counter/.gradle
+counter/build
+counter/gradle
+counter/gradlew
+counter/gradlew.bat
+counter/counterscenario.txt
+listeningCounters/.gradle
+listeningCounters/build
+listeningCounters/gradle
+listeningCounters/gradlew
+listeningCounters/gradlew.bat
+multicounter1/.gradle
+multicounter1/build
+multicounter1/gradle
+multicounter1/gradlew
+multicounter1/gradlew.bat
+timeouttable/.gradle
+timeouttable/gradle
+timeouttable/gradlew
+timeouttable/gradlew.bat
